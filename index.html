@@ -13,7 +13,7 @@
         <div class="container1">
             <div class="calculator1">
                 <div class="inputA">
-                    <input type="text" name="display" id="display">
+                    <input type="text" name="display" id="display" placeholder="0">
                 </div>
 
             </div>
@@ -63,7 +63,20 @@
         </div>
 
     </section>
+      <script>
+        function clearDisplay() {
+            document.getElementById("display").value = '';
+        }
 
+        function calculateResult() {
+            var result = eval(document.getElementById("display").value);
+            // Limit the result to 6 digits
+            var formattedResult = parseFloat(result).toFixed(6);
+            document.getElementById("display").value = formattedResult;
+        }
+       
+        
+    </script>
 
 </body>
 
